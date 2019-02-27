@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+
+  <title>bluetooth-element demo</title>
+  <script type="module">
+    import "./bluetooth-element.js"
+  </script>
+
+  <style>
+    body {
+    margin: 0;
+    font-family: "Roboto", "Noto", sans-serif;
+    line-height: 1.5;
+    min-height: 100vh;
+    background-color: #fff;
+  }
+
+  .centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card {
+    max-width: 800px;
+    margin: 24px;
+    padding: 16px;
+    color: #757575;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  }
+
+  .logo {
+    margin: 25px;
+  }
+</style>
+</head>
+<body class="centered">
+  <div class="centered card">
+    <h3>Basic bluetooth-element demo</h3>
+    <img class="logo" src="./assets/logo.png"/>
+    <button id="button" onclick="connectToDevice()">connect to device</button>
+    <bluetooth-element id="element"></bluetooth-element>
+  </div>
+  <script>
+    function connectToDevice() {
+      document.querySelector('#element').connect()
+    }
+  </script>
+</body>
+
+
+</html>
