@@ -46,7 +46,8 @@
     <h3>Basic bluetooth-element demo</h3>
     <img class="logo" src="./assets/logo.png"/>
     <button id="button" onclick="connectToDevice()">connect to device</button>
-    <bluetooth-element id="element"></bluetooth-element>
+    <bluetooth-element id="element" services=""></bluetooth-element>
+    <a>${document.querySelector('#element').server.device.name}</a>
   </div>
   <script>
     function connectToDevice() {
